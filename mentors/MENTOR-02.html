@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>황석준 멘토 포트폴리오 - TiChi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+</head>
+<body class="bg-gray-50">
+    <!-- 네비게이션 (패밀리룩 유지) -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-700 bg-white/95 backdrop-blur-xl border-b-4 border-orange-300 shadow-xl">
+        <div class="max-w-7xl mx-auto px-16 py-6 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center space-x-4">
+                <img src="../assets/tichi_logo.svg" alt="TiChi Logo" class="h-8 w-auto">
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html#팀소개" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">팀소개<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="../index.html#포트폴리오" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">포트폴리오<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="../index.html#멘토링" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">멘토링<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="../index.html#연락하기" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">연락하기<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 포트폴리오 메인 콘텐츠 -->
+    <main class="pt-32 pb-32 px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
+            
+            <!-- 왼쪽 고정 프로필 -->
+            <aside class="md:col-span-4 lg:col-span-3">
+                <div class="md:sticky md:top-32 bg-white p-8 rounded-3xl shadow-xl">
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?w=400&h=400&fit=crop&crop=face" alt="황석준" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-orange-200 shadow-lg mb-4">
+                        <h1 class="text-3xl font-black text-gray-800">황석준</h1>
+                        <p class="text-lg font-bold text-teal-600">컴퓨터 엔지니어</p>
+                    </div>
+                    <p class="text-gray-600 text-center text-sm my-6">
+                        "예술과 기술이 만나는 곳에서 새로운 경험을 만들어갑니다. 복잡한 기술을 쉽게 풀어내고, 창의적인 아이디어를 현실로 구현하는 일을 합니다."
+                    </p>
+                    <div class="border-t border-gray-200 pt-6">
+                        <h3 class="font-bold text-gray-800 mb-3">전문 분야</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-1 rounded-full">백엔드 개발</span>
+                            <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-2.5 py-1 rounded-full">임베디드</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-1 rounded-full">데이터 분석</span>
+                            <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-1 rounded-full">영상 제작</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-full">그래픽 디자인</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-1 rounded-full">교육 콘텐츠</span>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 pt-6 mt-6">
+                        <h3 class="font-bold text-gray-800 mb-3">연락하기</h3>
+                        <a href="mailto:oli@tichi.or.kr" class="block text-sm text-orange-600 font-semibold hover:underline">✉️ oli@tichi.or.kr</a>
+                        <a href="https://instagram.com/_0nly.0li_" target="_blank" class="block text-sm text-orange-600 font-semibold hover:underline mt-1">📷 @_0nly.0li_</a>
+                        <a href="https://onlyoli.space" target="_blank" class="block text-sm text-orange-600 font-semibold hover:underline mt-2">🌌 onlyoli.space</a>
+                        <a href="https://github.com/myhappydays" target="_blank" class="block text-sm text-orange-600 font-semibold hover:underline mt-1">🐙 @myhappydays</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 오른쪽 스크롤 포트폴리오 (하나의 긴 글로 구성) -->
+            <section class="md:col-span-8 lg:col-span-9">
+                <div class="bg-white p-12 rounded-3xl shadow-xl space-y-16">
+                    
+                    <!-- 자기소개 섹션 -->
+                    <article>
+                        <h2 class="text-4xl font-black text-orange-500 mb-6 border-b-4 border-orange-200 pb-4">아티스트 소개</h2>
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <p>프로그래밍을 처음 접한 것은 단순한 호기심에서였습니다. '컴퓨터는 어떻게 내 말을 알아듣지?'라는 질문에서 시작해, 코드 한 줄로 화면이 바뀌고 데이터가 움직이는 모습에 매료되었습니다. 하지만 진짜 전환점은 다른 사람들에게 내가 관심있는 분야를 설명할 때, '아하!'하는 순간을 봤을 때였습니다.</p>
+                            <p>그래서 저는 '괄호 안의 선생님'이 되기로 했습니다. 문장에서 괄호가 주요 내용을 보완하고 풍부하게 만들어주듯, 학습자의 주체성은 그대로 두면서 필요한 순간에 적절한 힌트와 영감을 제공하는 역할 말이에요. 정답을 던져주는 대신, 함께 길을 찾아가며 스스로 발견하는 기쁨을 나누고 싶습니다.</p>
+                            <p>지금은 데이터에서 인사이트를 찾고, 하드웨어에 생명을 불어넣고, 영상과 그래픽으로 이야기를 전하는 일을 하고 있습니다. 하지만 궁극적인 목표는 더 큽니다. 프로그래밍이 특정 전공자만의 영역이 아닌, 모든 사람이 자신만의 방식으로 활용할 수 있는 도구가 되는 세상. '만드는 기쁨'과 '해내는 자신감'을 더 많은 사람들과 나누고 싶습니다.</p>
+                            <p>기술은 차갑지 않습니다. 사람의 온기와 창의성이 만나 새로운 가능성을 열어주는 열쇠죠. 그 열쇠를 더 많은 손에 쥐어드리는 것이 제 역할이라고 생각합니다.</p>
+                        </div>
+                    </article>
+
+                    <!-- TiChi 프로젝트 섹션 -->
+                    <article>
+                        <h2 class="text-4xl font-black text-teal-500 mb-8 border-b-4 border-teal-200 pb-4">TiChi 프로젝트</h2>
+                        
+                        <div class="mb-12">
+                            <div class="w-3/4 mx-auto relative group">
+                                <div class="absolute inset-0 bg-gradient-to-br from-orange-200 to-red-200 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                                <div class="absolute inset-0 bg-gradient-to-br from-teal-200 to-blue-200 rounded-3xl transform -rotate-2 group-hover:-rotate-4 transition-transform duration-500"></div>
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=500&fit=crop" alt="청소년 정책 제안 대회" class="relative z-10 w-full h-auto object-cover rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="w-3/4 mx-auto mt-6">
+                                <h4 class="text-2xl font-black text-gray-800">2025 수원시 청소년 정책 제안 대회 대상</h4>
+                                <p class="text-gray-500 font-semibold mb-4">'수원시 청소년 동아리 멘토 매칭 지원 사업' 기획</p>
+                                <p class="text-gray-700 leading-relaxed">청소년과 대학생을 연결하는 멘토링 시스템을 제안하여 대상을 수상했습니다. 단순한 기술 전수가 아닌, 경험과 관점을 나누며 함께 성장할 수 있는 구조적 지원 방안을 설계했습니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-12">
+                            <div class="w-3/4 mx-auto relative group">
+                                <div class="absolute inset-0 bg-gradient-to-br from-orange-200 to-red-200 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                                <div class="absolute inset-0 bg-gradient-to-br from-teal-200 to-blue-200 rounded-3xl transform -rotate-2 group-hover:-rotate-4 transition-transform duration-500"></div>
+                                <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&h=500&fit=crop" alt="대학 입시 박람회" class="relative z-10 w-full h-auto object-cover rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="w-3/4 mx-auto mt-6">
+                                <h4 class="text-2xl font-black text-gray-800">2025 수원시 대학 입시 박람회 멘토 참여</h4>
+                                <p class="text-gray-500 font-semibold mb-4">컴퓨터공학 진로 상담 및 멘토링</p>
+                                <p class="text-gray-700 leading-relaxed">컴퓨터공학과 진학을 고민하는 고등학생들에게 현실적이고 솔직한 조언을 제공했습니다. '개발자가 되어야 하나?'라는 고민보다는 '기술로 무엇을 하고 싶은가?'에 초점을 맞춘 진로 상담을 진행했습니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-12">
+                            <div class="w-3/4 mx-auto relative group">
+                                <div class="absolute inset-0 bg-gradient-to-br from-orange-200 to-red-200 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                                <div class="absolute inset-0 bg-gradient-to-br from-teal-200 to-blue-200 rounded-3xl transform -rotate-2 group-hover:-rotate-4 transition-transform duration-500"></div>
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop" alt="청소년 어울림마당" class="relative z-10 w-full h-auto object-cover rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="w-3/4 mx-auto mt-6">
+                                <h4 class="text-2xl font-black text-gray-800">2025 수원시 청소년 어울림마당 부스 운영</h4>
+                                <p class="text-gray-500 font-semibold mb-4">TiChi 부스 기획 및 운영</p>
+                                <p class="text-gray-700 leading-relaxed">수원시 청소년 어울림마당에서 TiChi 부스를 운영하며 청소년들과 직접 소통하고 체험 활동을 진행했습니다.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="w-3/4 mx-auto relative group">
+                                <div class="absolute inset-0 bg-gradient-to-br from-orange-200 to-red-200 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                                <div class="absolute inset-0 bg-gradient-to-br from-teal-200 to-blue-200 rounded-3xl transform -rotate-2 group-hover:-rotate-4 transition-transform duration-500"></div>
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop" alt="TiChi Azit 개발" class="relative z-10 w-full h-auto object-cover rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="w-3/4 mx-auto mt-6">
+                                <h4 class="text-2xl font-black text-gray-800">TiChi Azit (티치 공식 홈페이지) 개발</h4>
+                                <p class="text-gray-500 font-semibold mb-4">풀스택 개발</p>
+                                <p class="text-gray-700 leading-relaxed">예술교육단체의 정체성을 담은 웹사이트를 개발했습니다. 기능적 완성도와 함께 사용자 친화적인 인터페이스 구현에 집중하여, 비개발자도 쉽게 컨텐츠를 관리할 수 있는 시스템을 구축했습니다.</p>
+                                <a href="https://github.com/myhappydays/tichi_azit" target="_blank" class="mt-4 inline-block bg-gray-800 text-white px-6 py-3 rounded-full font-bold hover:bg-gray-900 hover:scale-105 transition-all duration-300">
+                                    <svg class="inline-block w-5 h-5 mr-2" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                                    GitHub에서 보기
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 개인 프로젝트 섹션 -->
+                    <article>
+                        <h2 class="text-4xl font-black text-orange-500 mb-8 border-b-4 border-orange-200 pb-4">개인 프로젝트</h2>
+                        
+                        <div class="mb-12">
+                            <div class="w-3/4 mx-auto relative group">
+                                <div class="absolute inset-0 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-3xl transform -rotate-3 group-hover:-rotate-6 transition-transform duration-500"></div>
+                                <div class="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl transform rotate-2 group-hover:rotate-4 transition-transform duration-500"></div>
+                                <img src="https://images.unsplash.com/photo-1611162617213-6d22e52563a1?w=800&h=500&fit=crop" alt="VINA AI Assistant" class="relative z-10 w-full h-auto object-cover rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="w-3/4 mx-auto mt-6">
+                                <h4 class="text-2xl font-black text-gray-800">VINA (개인용 AI 어시스턴트)</h4>
+                                <p class="text-gray-500 font-semibold mb-4">사용자의 상황을 인지하여 먼저 말을 거는 능동적 AI 비서</p>
+                                <p class="text-gray-700 leading-relaxed">기존 AI 챗봇의 한계를 극복하기 위해 개발 시작. Gemini의 'Scheduled Actions'보다 2개월 앞선 능동적 대화 시작 기능과 자동 기억 시스템을 구현했습니다. 단순한 명령 처리를 넘어서, 사용자의 패턴을 학습하고 필요한 순간에 먼저 도움을 제공하는 진정한 '어시스턴트'를 목표로 했습니다.</p>
+                                <a href="https://github.com/myhappydays/vina" target="_blank" class="mt-4 inline-block bg-gray-800 text-white px-6 py-3 rounded-full font-bold hover:bg-gray-900 hover:scale-105 transition-all duration-300">
+                                    <svg class="inline-block w-5 h-5 mr-2" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                                    GitHub에서 보기
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="w-3/4 mx-auto relative group">
+                                <div class="absolute inset-0 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-3xl transform -rotate-3 group-hover:-rotate-6 transition-transform duration-500"></div>
+                                <div class="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl transform rotate-2 group-hover:rotate-4 transition-transform duration-500"></div>
+                                <img src="https://images.unsplash.com/photo-1592609931095-54a2168ae893?w=800&h=500&fit=crop" alt="Kiro Markup Language" class="relative z-10 w-full h-auto object-cover rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="w-3/4 mx-auto mt-6">
+                                <h4 class="text-2xl font-black text-gray-800">Kiro (커스텀 마크업 언어)</h4>
+                                <p class="text-gray-500 font-semibold mb-4">문서화와 인쇄를 위한 독자적인 마크업 언어 'Kiro'와 웹 에디터 'Kiro-Ground'</p>
+                                <p class="text-gray-700 leading-relaxed">기존 마크업 언어의 제약사항에 대한 불만에서 시작된 프로젝트. 직관적이고 명시적인 자체 문법 체계를 설계하고, Python 기반 파서와 웹 기반 편집 환경까지 완성했습니다. '없으면 만들면 되지'라는 개발자의 본질적 정신을 보여주는 프로젝트입니다.</p>
+                                <a href="https://github.com/myhappydays/kiro_ground" target="_blank" class="mt-4 inline-block bg-gray-800 text-white px-6 py-3 rounded-full font-bold hover:bg-gray-900 hover:scale-105 transition-all duration-300">
+                                    <svg class="inline-block w-5 h-5 mr-2" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                                    GitHub에서 보기
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 기술 및 도구 섹션 -->
+                    <article>
+                        <h2 class="text-4xl font-black text-orange-500 mb-6 border-b-4 border-orange-200 pb-4">기술 및 도구</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Python ⭐</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Go ⭐</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">C++</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">React</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">HTML/CSS/JS</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Arduino ⭐</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">ESP32 ⭐</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Raspberry Pi</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Photoshop</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Illustrator</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Lightroom</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Figma</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Premiere Pro ⭐</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Ableton Live</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Fusion 360</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Git</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Slack</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Notion</div>
+                        </div>
+                    </article>
+
+                    <!-- 학력 및 수상 섹션 -->
+                    <article>
+                        <h2 class="text-4xl font-black text-teal-500 mb-6 border-b-4 border-teal-200 pb-4">학력 및 수상</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-orange-500 font-bold mr-3">🎓</span>
+                                <div>
+                                    <p class="font-bold text-gray-800">협성대학교 컴퓨터공학과 (재학)</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 font-bold mr-3">📚</span>
+                                <div>
+                                    <p class="font-bold text-gray-800">프로그래머스 데이터 분석 데브코스 수료</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 font-bold mr-3">🏆</span>
+                                <div>
+                                    <p class="font-bold text-gray-800">협성대학교 AI EXPO KOREA 2025 & 2025 월드 IT 쇼 참관 후기 공모전 대상</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 font-bold mr-3">🥉</span>
+                                <div>
+                                    <p class="font-bold text-gray-800">한서대학교 전국 생성형 AI 작곡 경연대회 장려상</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 font-bold mr-3">🥈</span>
+                                <div>
+                                    <p class="font-bold text-gray-800">한국 청소년 IT 경진대회 데이터 분석 부문 은상</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 font-bold mr-3">📜</span>
+                                <div>
+                                    <p class="font-bold text-gray-800">정보처리기능사</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 font-bold mr-3">📜</span>
+                                <div>
+                                    <p class="font-bold text-gray-800">코딩지도사 1급</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 font-bold mr-3">📜</span>
+                                <div>
+                                    <p class="font-bold text-gray-800">ITQ OA 마스터 (한글, 엑셀, 파워포인트 1급)</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 푸터 (패밀리룩 유지) -->
+    <footer class="bg-black text-white py-20 px-16 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center space-y-8">
+                 <div class="flex items-center justify-center space-x-4">
+                    <img src="../assets/tichi_logo.svg" alt="TiChi Logo" class="h-10 w-auto">
+                </div>
+                <div class="text-xl text-gray-400 font-medium max-w-2xl mx-auto">
+                    <div class="mb-2">Teaching imagination, Connecting hearts infinitely.</div>
+                    <div class="text-sm">예술교육 | 창작워크숍 | 네이티브작가 | 멘토링 | 진로상담</div>
+                </div>
+                <div class="border-t border-gray-800 pt-8">
+                    <div class="text-sm text-gray-500 space-y-2">
+                        <div>© 2024 TiChi (티치). 모든 권리 보유.</div>
+                        <div>주소: 서울시 마포구 홍대입구역 근처 어딘가 🎭</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

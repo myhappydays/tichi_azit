@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 포트폴리오 만들기 - TiChi 프로그램</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+</head>
+<body class="bg-gray-50">
+    <!-- 네비게이션 (패밀리룩 유지) -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-700 bg-white/95 backdrop-blur-xl border-b-4 border-orange-300 shadow-xl">
+        <div class="max-w-7xl mx-auto px-16 py-6 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center space-x-4">
+                <img src="../assets/tichi_logo.svg" alt="TiChi Logo" class="h-8 w-auto">
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html#팀소개" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">팀소개<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="../index.html#포트폴리오" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">포트폴리오<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="../index.html#멘토링" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">멘토링<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="../index.html#연락하기" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">연락하기<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 프로그램 상세 콘텐츠 -->
+    <main class="pt-32 pb-32 px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
+            
+            <!-- 왼쪽 고정 모집요강 -->
+            <aside class="md:col-span-4 lg:col-span-3">
+                <div class="md:sticky md:top-32 bg-white p-8 rounded-3xl shadow-xl">
+                    <h2 class="text-2xl font-black text-gray-800 mb-6">모집 요강</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-bold text-gray-800">📅 일정</h3>
+                            <p class="text-gray-600">2024년 9월 5일 - 9월 26일 (매주 목)</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">👥 모집 인원</h3>
+                            <p class="text-gray-600">최대 8명 (소수 정예)</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">🎯 대상</h3>
+                            <p class="text-gray-600">자신만의 포트폴리오가 필요한 모든 분야의 아티스트</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">📍 장소</h3>
+                            <p class="text-gray-600">TiChi 스튜디오 (서울시 마포구)</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">💰 수강료</h3>
+                            <p class="text-2xl font-bold text-orange-500">550,000원</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 pt-6 mt-6">
+                        <a href="../404.html" class="block w-full text-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-4 rounded-full text-lg font-bold hover:scale-105 transition-transform duration-300 shadow-lg">
+                            수강 신청하기
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 오른쪽 스크롤 상세내용 -->
+            <section class="md:col-span-8 lg:col-span-9">
+                <div class="bg-white p-12 rounded-3xl shadow-xl space-y-16">
+                    
+                    <!-- 프로그램 소개 -->
+                    <article>
+                        <div class="mb-6 flex flex-wrap items-center gap-4">
+                            <span class="bg-orange-100 text-orange-800 text-sm font-bold px-3 py-1 rounded-full">오프라인 워크숍</span>
+                            <span class="bg-orange-200 text-orange-800 text-sm font-bold px-3 py-1 rounded-full">🔥 모집중</span>
+                        </div>
+                        <h1 class="text-5xl font-black text-gray-800 mb-4">나만의 포트폴리오 만들기</h1>
+                        <p class="text-xl text-gray-600 leading-relaxed">홍대 스튜디오에서 진행되는 4주 집중 워크숍. 기획부터 완성까지, 현직 멘토가 당신의 작품 세계 구축을 함께합니다.</p>
+                    </article>
+
+                    <!-- 무엇을 배우나요? -->
+                    <article>
+                        <h2 class="text-4xl font-black text-teal-500 mb-6 border-b-4 border-teal-200 pb-4">어떤 결과물을 얻나요?</h2>
+                        <div class="space-y-6">
+                            <p class="text-gray-700 leading-relaxed">이 워크숍의 유일한 목표는 4주 안에 당신의 이름으로 된, 세상에 단 하나뿐인 포트폴리오를 완성하는 것입니다. 단순한 작품 나열이 아닌, 당신의 철학과 스토리가 담긴 포트폴리오를 만들 수 있도록 돕습니다.</p>
+                            <ul class="list-disc list-inside space-y-3 pl-2 text-gray-700">
+                                <li><span class="font-bold">컨셉 기획:</span> 나의 강점과 스토리를 담은 포트폴리오 컨셉 도출</li>
+                                <li><span class="font-bold">작품 선정 및 제작:</span> 컨셉에 맞는 기존 작품 선정 및 신규 작품 제작</li>
+                                <li><span class="font-bold">디자인 및 레이아웃:</span> 온라인/오프라인 포트폴리오 디자인 및 편집</li>
+                                <li><span class="font-bold">아티스트 스테이트먼트:</span> 작품 세계를 설명하는 글쓰기</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- 참여 멘토 -->
+                    <article>
+                        <h2 class="text-4xl font-black text-orange-500 mb-8 border-b-4 border-orange-200 pb-4">참여 멘토</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <a href="../mentors/kim-yerin.html" class="flex items-center bg-gray-100 p-4 rounded-2xl group hover:bg-orange-100 transition-colors duration-300">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" alt="김예린" class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md mr-4 transform group-hover:scale-110 transition-transform duration-300">
+                                <div>
+                                    <h3 class="font-bold text-gray-800 group-hover:text-orange-600">김예린</h3>
+                                    <p class="text-sm text-teal-600 font-semibold">시각예술 디렉터</p>
+                                </div>
+                            </a>
+                            <a href="../mentors/park-junho.html" class="flex items-center bg-gray-100 p-4 rounded-2xl group hover:bg-orange-100 transition-colors duration-300">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="박준호" class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md mr-4 transform group-hover:scale-110 transition-transform duration-300">
+                                <div>
+                                    <h3 class="font-bold text-gray-800 group-hover:text-orange-600">박준호</h3>
+                                    <p class="text-sm text-teal-600 font-semibold">음악 교육 전문가</p>
+                                </div>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 푸터 (패밀리룩 유지) -->
+    <footer class="bg-black text-white py-20 px-16 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center space-y-8">
+                 <div class="flex items-center justify-center space-x-4">
+                    <img src="../assets/tichi_logo.svg" alt="TiChi Logo" class="h-10 w-auto">
+                </div>
+                <div class="text-xl text-gray-400 font-medium max-w-2xl mx-auto">
+                    <div class="mb-2">Teaching imagination, Connecting hearts infinitely.</div>
+                    <div class="text-sm">예술교육 | 창작워크숍 | 네이티브작가 | 멘토링 | 진로상담</div>
+                </div>
+                <div class="border-t border-gray-800 pt-8">
+                    <div class="text-sm text-gray-500 space-y-2">
+                        <div>© 2024 TiChi (티치). 모든 권리 보유.</div>
+                        <div>주소: 서울시 마포구 홍대입구역 근처 어딘가 🎭</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

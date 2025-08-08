@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디지털 아트 파운데이션 - TiChi 프로그램</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+</head>
+<body class="bg-gray-50">
+    <!-- 네비게이션 (패밀리룩 유지) -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-700 bg-white/95 backdrop-blur-xl border-b-4 border-orange-300 shadow-xl">
+        <div class="max-w-7xl mx-auto px-16 py-6 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center space-x-4">
+                <img src="../assets/tichi_logo.svg" alt="TiChi Logo" class="h-8 w-auto">
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html#팀소개" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">팀소개<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="../index.html#포트폴리오" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">포트폴리오<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="../index.html#멘토링" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">멘토링<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="../index.html#연락하기" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">연락하기<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 프로그램 상세 콘텐츠 -->
+    <main class="pt-32 pb-32 px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
+            
+            <!-- 왼쪽 고정 모집요강 -->
+            <aside class="md:col-span-4 lg:col-span-3">
+                <div class="md:sticky md:top-32 bg-white p-8 rounded-3xl shadow-xl">
+                    <h2 class="text-2xl font-black text-gray-800 mb-6">모집 요강</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-bold text-gray-800">📅 일정</h3>
+                            <p class="text-gray-600">2024년 9월 1일 - 10월 12일 (6주)</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">👥 모집 인원</h3>
+                            <p class="text-gray-600">최대 12명 (소수 정예)</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">🎯 대상</h3>
+                            <p class="text-gray-600">디지털 드로잉 입문자, 컨셉 아티스트 지망생</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">📍 장소</h3>
+                            <p class="text-gray-600">온라인 (Zoom & Discord)</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">💰 수강료</h3>
+                            <p class="text-2xl font-bold text-orange-500">350,000원</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 pt-6 mt-6">
+                        <div class="block w-full text-center bg-gray-300 text-gray-500 px-6 py-4 rounded-full text-lg font-bold cursor-not-allowed shadow-md">
+                            아쉽지만 마감되었어요 😢
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 오른쪽 스크롤 상세내용 -->
+            <section class="md:col-span-8 lg:col-span-9">
+                <div class="bg-white p-12 rounded-3xl shadow-xl space-y-16">
+                    
+                    <!-- 프로그램 소개 -->
+                    <article>
+                        <div class="mb-6 flex flex-wrap items-center gap-4">
+                            <span class="bg-teal-100 text-teal-800 text-sm font-bold px-3 py-1 rounded-full">온라인 과정</span>
+                            <span class="bg-gray-200 text-gray-700 text-sm font-bold px-3 py-1 rounded-full">🏁 모집마감</span>
+                        </div>
+                        <h1 class="text-5xl font-black text-gray-800 mb-4">디지털 아트 파운데이션</h1>
+                        <p class="text-xl text-gray-600 leading-relaxed">6주 동안 배우는 디지털 드로잉과 컨셉 아트의 모든 것. Adobe Photoshop과 Procreate를 마스터하여 당신만의 세계를 창조하세요.</p>
+                    </article>
+
+                    <!-- 무엇을 배우나요? -->
+                    <article>
+                        <h2 class="text-4xl font-black text-teal-500 mb-6 border-b-4 border-teal-200 pb-4">무엇을 배우나요?</h2>
+                        <div class="space-y-6">
+                            <p class="text-gray-700 leading-relaxed">본 과정은 디지털 아트의 기초를 단단히 다지고, 자신만의 스타일을 찾아나갈 수 있도록 체계적으로 설계되었습니다. 이론과 실습을 병행하며, 매주 주어지는 과제를 통해 실력을 빠르게 향상시킬 수 있습니다.</p>
+                            <ul class="list-disc list-inside space-y-3 pl-2 text-gray-700">
+                                <li><span class="font-bold">1주차:</span> 디지털 드로잉 기초 - 타블렛과 소프트웨어 완전 정복</li>
+                                <li><span class="font-bold">2주차:</span> 빛과 색의 이해 - 매력적인 색감 연출하기</li>
+                                <li><span class="font-bold">3주차:</span> 인체 드로잉 - 살아있는 캐릭터 만들기</li>
+                                <li><span class="font-bold">4주차:</span> 컨셉 아트 - 매력적인 세계관 설정과 시각화</li>
+                                <li><span class="font-bold">5주차:</span> 포트폴리오 기획 - 나만의 작품 시리즈 만들기</li>
+                                <li><span class="font-bold">6주차:</span> 최종 피드백 및 작품 완성</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- 참여 멘토 -->
+                    <article>
+                        <h2 class="text-4xl font-black text-orange-500 mb-8 border-b-4 border-orange-200 pb-4">참여 멘토</h2>
+                        <a href="../mentors/kim-yerin.html" class="flex items-center bg-gray-100 p-6 rounded-2xl group hover:bg-orange-100 transition-colors duration-300">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=200&h=200&fit=crop&crop=face" alt="김예린" class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md mr-6 transform group-hover:scale-110 transition-transform duration-300">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 group-hover:text-orange-600">김예린</h3>
+                                <p class="text-teal-600 font-semibold">시각예술 디렉터</p>
+                                <p class="text-gray-600 mt-1">컨셉 아트 및 포트폴리오 기획 담당</p>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 푸터 (패밀리룩 유지) -->
+    <footer class="bg-black text-white py-20 px-16 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center space-y-8">
+                 <div class="flex items-center justify-center space-x-4">
+                    <img src="../assets/tichi_logo.svg" alt="TiChi Logo" class="h-10 w-auto">
+                </div>
+                <div class="text-xl text-gray-400 font-medium max-w-2xl mx-auto">
+                    <div class="mb-2">Teaching imagination, Connecting hearts infinitely.</div>
+                    <div class="text-sm">예술교육 | 창작워크숍 | 네이티브작가 | 멘토링 | 진로상담</div>
+                </div>
+                <div class="border-t border-gray-800 pt-8">
+                    <div class="text-sm text-gray-500 space-y-2">
+                        <div>© 2024 TiChi (티치). 모든 권리 보유.</div>
+                        <div>주소: 서울시 마포구 홍대입구역 근처 어딘가 🎭</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

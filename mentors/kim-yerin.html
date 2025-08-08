@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김예린 멘토 포트폴리오 - TiChi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+</head>
+<body class="bg-gray-50">
+    <!-- 네비게이션 (패밀리룩 유지) -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-700 bg-white/95 backdrop-blur-xl border-b-4 border-orange-300 shadow-xl">
+        <div class="max-w-7xl mx-auto px-16 py-6 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center space-x-4">
+                <img src="../assets/tichi_logo.svg" alt="TiChi Logo" class="h-8 w-auto">
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html#팀소개" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">팀소개<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="../index.html#포트폴리오" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">포트폴리오<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="../index.html#멘토링" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">멘토링<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="../index.html#연락하기" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">연락하기<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 포트폴리오 메인 콘텐츠 -->
+    <main class="pt-32 pb-32 px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
+            
+            <!-- 왼쪽 고정 프로필 -->
+            <aside class="md:col-span-4 lg:col-span-3">
+                <div class="md:sticky md:top-32 bg-white p-8 rounded-3xl shadow-xl">
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face" alt="김예린" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-orange-200 shadow-lg mb-4">
+                        <h1 class="text-3xl font-black text-gray-800">김예린</h1>
+                        <p class="text-lg font-bold text-teal-600">시각예술 디렉터</p>
+                    </div>
+                    <p class="text-gray-600 text-center text-sm my-6">
+                        "모든 선과 색에는 이야기가 있습니다. 당신의 이야기를 세상에 펼칠 수 있도록 돕겠습니다."
+                    </p>
+                    <div class="border-t border-gray-200 pt-6">
+                        <h3 class="font-bold text-gray-800 mb-3">전문 분야</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-1 rounded-full">컨템포러리 아트</span>
+                            <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-2.5 py-1 rounded-full">디지털 미디어</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-1 rounded-full">전시 기획</span>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 pt-6 mt-6">
+                        <h3 class="font-bold text-gray-800 mb-3">연락하기</h3>
+                        <a href="#" class="block text-sm text-orange-600 font-semibold hover:underline">yerin.kim@tichi.or.kr</a>
+                        <a href="#" class="block text-sm text-orange-600 font-semibold hover:underline mt-1">Instagram @yerin_tichi</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 오른쪽 스크롤 포트폴리오 (하나의 긴 글로 구성) -->
+            <section class="md:col-span-8 lg:col-span-9">
+                <div class="bg-white p-12 rounded-3xl shadow-xl space-y-16">
+                    
+                    <!-- 자기소개 섹션 -->
+                    <article>
+                        <h2 class="text-4xl font-black text-orange-500 mb-6 border-b-4 border-orange-200 pb-4">아티스트 소개</h2>
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <p>안녕하세요, 시각예술 디렉터 김예린입니다. 저는 10년 넘게 디지털과 현실의 경계를 넘나들며 새로운 시각적 언어를 탐구해왔습니다. 저의 작업은 단순히 아름다움을 넘어, 기술과 인간 감성의 교차점에서 어떤 이야기가 피어날 수 있는지에 대한 질문을 던집니다.</p>
+                            <p>TiChi에서는 저의 경험을 바탕으로 여러분 각자가 가진 고유한 예술적 목소리를 찾고, 그것을 세상에 자신감 있게 선보일 수 있도록 돕고자 합니다. 기술적인 스킬은 물론, 컨셉을 발전시키고 자신만의 포트폴리오를 구축하는 전 과정을 함께하겠습니다.</p>
+                        </div>
+                    </article>
+
+                    <!-- 대표 프로젝트 섹션 -->
+                    <article>
+                        <h2 class="text-4xl font-black text-teal-500 mb-8 border-b-4 border-teal-200 pb-4">주요 활동</h2>
+                        
+                        <!-- TiChi 프로젝트 -->
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">🎨 TiChi 연계 프로젝트</h3>
+                        <div class="mb-12">
+                            <div class="w-3/4 mx-auto relative group">
+                                <div class="absolute inset-0 bg-gradient-to-br from-orange-200 to-red-200 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                                <div class="absolute inset-0 bg-gradient-to-br from-teal-200 to-blue-200 rounded-3xl transform -rotate-2 group-hover:-rotate-4 transition-transform duration-500"></div>
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop" alt="Project: 도시의 숨결" class="relative z-10 w-full h-auto object-cover rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="w-3/4 mx-auto mt-6">
+                                <h4 class="text-2xl font-black text-gray-800">청년작가 발굴 워크숍</h4>
+                                <p class="text-gray-500 font-semibold mb-4">총괄 디렉팅, 2023</p>
+                                <p class="text-gray-700 leading-relaxed">TiChi의 대표 프로그램으로, 12명의 신진 작가들과 함께 8주간 포트폴리오를 개발하고 그룹전을 개최했습니다. 참여 작가 중 2명은 실제 갤러리와 계약을 맺는 성과를 거두었습니다.</p>
+                          지금 ㅇ  </div>
+                        </div>
+
+                        <!-- 개인 프로젝트 -->
+                        <h3 class="text-2xl font-bold text-gray-800 mt-16 mb-6">✨ 개인 작업</h3>
+                        <div>
+                            <div class="w-3/4 mx-auto relative group">
+                                <div class="absolute inset-0 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-3xl transform -rotate-3 group-hover:-rotate-6 transition-transform duration-500"></div>
+                                <div class="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl transform rotate-2 group-hover:rotate-4 transition-transform duration-500"></div>
+                                <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&h=500&fit=crop" alt="Collaboration: 경계 없는 캔버스" class="relative z-10 w-full h-auto object-cover rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="w-3/4 mx-auto mt-6">
+                                <h4 class="text-2xl font-black text-gray-800">Project: "경계 없는 캔버스"</h4>
+                                <p class="text-gray-500 font-semibold mb-4">VR 아트 & 협업 플랫폼, 2022</p>
+                                <p class="text-gray-700 leading-relaxed">국내외 5명의 아티스트와 함께 가상현실 공간에서 하나의 거대한 작품을 만들어가는 협업 프로젝트를 리드했습니다. 물리적 제약 없이 아이디어를 실시간으로 공유하고 발전시키는 과정을 통해 새로운 형태의 창작 가능성을 탐구했습니다.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 기술 및 도구 섹션 -->
+                    <article>
+                        <h2 class="text-4xl font-black text-orange-500 mb-6 border-b-4 border-orange-200 pb-4">기술 및 도구</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Adobe Photoshop</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Procreate</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Figma</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Processing</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Blender</div>
+                            <div class="bg-gray-100 p-4 rounded-xl font-semibold text-gray-700 transition-all duration-300 hover:scale-110 hover:bg-orange-200 hover:text-orange-800 cursor-pointer">Unity</div>
+                        </div>
+                    </article>
+
+                    <!-- 학력 및 수상 섹션 -->
+                    <article>
+                        <h2 class="text-4xl font-black text-teal-500 mb-6 border-b-4 border-teal-200 pb-4">학력 및 수상</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-orange-500 font-bold mr-3">🎓</span>
+                                <div>
+                                    <p class="font-bold text-gray-800">홍익대학교 미술대학원 석사 졸업 (MFA)</p>
+                                    <p class="text-sm text-gray-500">미디어 아트 전공, 2015</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 font-bold mr-3">🏆</span>
+                                <div>
+                                    <p class="font-bold text-gray-800">올해의 젊은 작가상 수상</p>
+                                    <p class="text-sm text-gray-500">국립현대미술관, 2021</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 font-bold mr-3">📜</span>
+                                <div>
+                                    <p class="font-bold text-gray-800">Adobe Certified Expert (ACE)</p>
+                                    <p class="text-sm text-gray-500">Photoshop, 2019</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 푸터 (패밀리룩 유지) -->
+    <footer class="bg-black text-white py-20 px-16 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center space-y-8">
+                 <div class="flex items-center justify-center space-x-4">
+                    <div class="text-5xl font-black tracking-tighter">
+                        <span class="inline-block text-orange-400 transform -rotate-2">T</span>
+                        <span class="inline-block text-yellow-400">i</span>
+                        <span class="inline-block text-teal-400 transform rotate-1">C</span>
+                        <span class="inline-block text-yellow-400 transform -rotate-1">h</span>
+                        <span class="inline-block text-yellow-400">i</span>
+                    </div>
+                </div>
+                <div class="text-xl text-gray-400 font-medium max-w-2xl mx-auto">
+                    <div class="mb-2">Teaching imagination, Connecting hearts infinitely.</div>
+                    <div class="text-sm">예술교육 | 창작워크숍 | 네이티브작가 | 멘토링 | 진로상담</div>
+                </div>
+                <div class="border-t border-gray-800 pt-8">
+                    <div class="text-sm text-gray-500 space-y-2">
+                        <div>© 2024 TiChi (티치). 모든 권리 보유.</div>
+                        <div>주소: 서울시 마포구 홍대입구역 근처 어딘가 🎭</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,25 +1,670 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>티치의 아지트</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-    }
-    h1 {
-      color: #ff6347; /* Tomato color */
-    }
-    p {
-      color: #555;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiChi - 당신의 예술이 세상을 바꾼다!</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Pretendard Font CDN -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <!-- 커스텀 스타일 -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- 파비콘 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
 </head>
-<body>
-  <h1>공사중! 🚧</h1>
-  <p>티치의 아지트를 짓고 있어요.</p>
-  <image src="제리망치질.gif" alt="제리 망치질" style="width: 300px; height: auto;">
+<body class="snap-y snap-mandatory">
+    <!-- 네비게이션 -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-700 bg-transparent">
+        <div class="max-w-7xl mx-auto px-16 py-6 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="assets/tichi_logo.svg" alt="TiChi Logo" class="h-8 w-auto">
+                <div class="hidden md:block text-sm text-gray-600 font-medium">
+                    <div>Teaching imagination,</div>
+                    <div>Connecting hearts infinitely.</div>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#팀소개" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">팀소개<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="#포트폴리오" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">포트폴리오<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="#멘토링" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">멘토링<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+                <a href="#연락하기" class="relative group font-bold text-gray-700 hover:text-orange-500 transition-all duration-300 text-sm uppercase tracking-wide">연락하기<span class="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300 group-hover:w-full rounded-full"></span></a>
+            </div>
+            
+            <!-- 모바일 메뉴 버튼 -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-orange-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200">
+            <div class="px-8 py-4 space-y-4">
+                <a href="#팀소개" class="block text-gray-700 hover:text-orange-500 font-bold">팀소개</a>
+                <a href="#포트폴리오" class="block text-gray-700 hover:text-orange-500 font-bold">포트폴리오</a>
+                <a href="#멘토링" class="block text-gray-700 hover:text-orange-500 font-bold">멘토링</a>
+                <a href="#연락하기" class="block text-gray-700 hover:text-orange-500 font-bold">연락하기</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 배경 애니메이션 요소들 -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div id="bg-blob-1" class="absolute w-96 h-96 rounded-full blur-3xl opacity-20 animate-bounce" style="background: linear-gradient(45deg, #E07A5F, #F2CC8F);"></div>
+        <div id="bg-blob-2" class="absolute w-80 h-80 rounded-full blur-3xl opacity-25 animate-pulse" style="background: linear-gradient(45deg, #81B29A, #3D5A80); animation-delay: 1s;"></div>
+    </div>
+
+    <!-- 히어로 섹션 -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 snap-start">
+        <div class="text-center z-10 max-w-6xl mx-auto px-16">
+            <div class="mb-12 flex justify-center">
+                <div class="flex space-x-2">
+                    <div class="w-4 h-4 bg-orange-400 rounded-full animate-bounce"></div>
+                    <div class="w-4 h-4 bg-yellow-400 rounded-full animate-bounce" style="animation-delay: 0.1s;"></div>
+                    <div class="w-4 h-4 bg-teal-400 rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+                </div>
+            </div>
+            
+            <h1 class="text-7xl md:text-9xl font-black mb-8 leading-none">
+                <span class="hero-word inline-block transform hover:scale-110 hover:rotate-3 transition-all duration-500 text-orange-500">
+                    당신의
+                </span>
+                <br />
+                <span class="hero-word inline-block transform hover:scale-110 hover:-rotate-2 transition-all duration-500 text-teal-500">
+                    예술이
+                </span>
+                <br />
+                <span class="hero-word inline-block transform hover:scale-110 hover:rotate-1 transition-all duration-500 text-yellow-500">
+                    세상을
+                </span>
+                <br />
+                <span class="hero-word inline-block transform hover:scale-110 hover:-rotate-1 transition-all duration-500 text-gray-800">
+                    바꾼다!
+                </span>
+            </h1>
+            
+            <div class="mb-12 max-w-4xl mx-auto">
+                <p class="text-2xl md:text-3xl font-bold text-gray-700 leading-relaxed mb-4">
+                    <span class="bg-yellow-200 px-2 py-1 rounded transform rotate-1 inline-block">기회</span>를 찾고 있나요? 
+                </p>
+                <p class="text-2xl md:text-3xl font-bold text-gray-700 leading-relaxed">
+                    <span class="bg-orange-200 px-2 py-1 rounded transform -rotate-1 inline-block">포트폴리오</span>를 쌓고 싶나요?
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <button class="cta-button hero-cta-button group bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full text-xl font-bold hover:scale-110 hover:rotate-2 transition-all duration-300 flex items-center shadow-2xl">
+                    <span class="mr-2">🚀</span>
+                    지금 시작하기!
+                </button>
+                <button class="cta-button hero-cta-button group bg-white border-4 border-teal-400 text-teal-600 px-8 py-4 rounded-full text-xl font-bold hover:scale-110 hover:-rotate-2 hover:bg-teal-50 transition-all duration-300 flex items-center shadow-xl">
+                    <span class="mr-2">🎯</span>
+                    기회 찾아보기
+                </button>
+            </div>
+
+            <div id="opportunities" class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="group text-center transform hover:scale-110 transition-all duration-300">
+                    <div class="text-4xl mb-2 group-hover:animate-bounce">🎨</div>
+                    <div class="text-lg font-bold text-gray-700">전시 기회</div>
+                    <div class="text-sm text-gray-500">갤러리 & 공간 연결</div>
+                </div>
+                <div class="group text-center transform hover:scale-110 transition-all duration-300">
+                    <div class="text-4xl mb-2 group-hover:animate-bounce">🤝</div>
+                    <div class="text-lg font-bold text-gray-700">네트워킹</div>
+                    <div class="text-sm text-gray-500">업계 전문가 만남</div>
+                </div>
+                <div class="group text-center transform hover:scale-110 transition-all duration-300">
+                    <div class="text-4xl mb-2 group-hover:animate-bounce">💰</div>
+                    <div class="text-lg font-bold text-gray-700">펀딩 지원</div>
+                    <div class="text-sm text-gray-500">프로젝트 자금 조달</div>
+                </div>
+                <div class="group text-center transform hover:scale-110 transition-all duration-300">
+                    <div class="text-4xl mb-2 group-hover:animate-bounce">📱</div>
+                    <div class="text-lg font-bold text-gray-700">미디어 노출</div>
+                    <div class="text-sm text-gray-500">언론사 & SNS 홍보</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 스크롤 다운 화살표 -->
+        <div class="absolute bottom-8 animate-bounce cursor-pointer" id="scroll-down" style="animation-duration: 2s; left: calc(50% - 20px);">
+            <svg class="w-10 h-10 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 현재 모집중인 프로그램 섹션 -->
+    <section id="programs" class="py-32 px-16 bg-gray-50 scroll-animate">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-6xl md:text-7xl font-black mb-8">
+                    <span class="text-orange-500">🔥 현재 모집중인</span>
+                    <span class="text-gray-800"> 프로그램</span>
+                </h2>
+                <p class="text-2xl text-gray-600 font-semibold max-w-3xl mx-auto">
+                    당신의 예술적 성장을 위한 기회가 바로 여기에 있어요!
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Program Card 1 -->
+                <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 p-8">
+                    <div class="mb-4 flex items-center space-x-2">
+                        <span class="bg-teal-100 text-teal-800 text-sm font-bold px-3 py-1 rounded-full">온라인 과정</span>
+                        <span class="bg-gray-200 text-gray-700 text-sm font-bold px-3 py-1 rounded-full">🏁 모집마감</span>
+                    </div>
+                    <h3 class="text-3xl font-black text-gray-800 mb-4">디지털 아트 파운데이션</h3>
+                    <p class="text-gray-600 mb-6">6주 동안 배우는 디지털 드로잉과 컨셉 아트의 모든 것. Adobe Photoshop과 Procreate를 마스터하세요.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="text-lg font-bold text-gray-800">수강료: 350,000원</div>
+                        <a href="programs/digital-art-foundation.html" class="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-transform duration-300">
+                            자세히 보기
+                        </a>
+                    </div>
+                </div>
+                <!-- Program Card 2 -->
+                <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 p-8">
+                    <div class="mb-4 flex items-center space-x-2">
+                        <span class="bg-orange-100 text-orange-800 text-sm font-bold px-3 py-1 rounded-full">오프라인 워크숍</span>
+                        <span class="bg-orange-200 text-orange-800 text-sm font-bold px-3 py-1 rounded-full">🔥 모집중</span>
+                    </div>
+                    <h3 class="text-3xl font-black text-gray-800 mb-4">나만의 포트폴리오 만들기</h3>
+                    <p class="text-gray-600 mb-6">홍대 스튜디오에서 진행되는 4주 집중 워크숍. 기획부터 완성까지, 현직 멘토가 함께합니다.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="text-lg font-bold text-gray-800">수강료: 550,000원</div>
+                        <a href="programs/portfolio-workshop.html" class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-transform duration-300">
+                            자세히 보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 팀 소개 섹션 -->
+    <section id="팀소개" class="py-32 px-16 bg-white scroll-animate">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-6xl md:text-7xl font-black mb-8 transform hover:scale-105 transition-transform duration-300">
+                    <span class="text-orange-500">신생</span>
+                    <span class="text-gray-800"> but </span>
+                    <span class="text-teal-500">강력한!</span>
+                </h2>
+                <p class="text-2xl text-gray-600 font-semibold max-w-4xl mx-auto leading-relaxed">
+                    TiChi는 <span class="bg-yellow-200 px-2 py-1 rounded">2020년 시작</span>된 신생 비영리 예술 교육 단체지만,
+                    <br />이미 <span class="bg-orange-200 px-2 py-1 rounded">수많은 기회</span>를 창출하고 있어요!
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-20 items-center mb-20">
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4" id="mission-icon-container">
+                            <!-- Mission icon will be dynamically loaded here by main.js -->
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-800">우리의 미션</h3>
+                        <p class="text-xl text-gray-600 leading-relaxed">
+                            예술가들이 <span class="font-bold text-orange-500">실제 기회</span>를 잡을 수 있도록 돕는 것!
+                            단순한 교육을 넘어서 <span class="font-bold text-teal-500">네트워킹, 전시, 펀딩</span>까지 연결해드립니다.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="stat-card bg-gradient-to-br from-orange-100 to-red-100 p-6 rounded-2xl text-center transform hover:scale-105 hover:rotate-1 transition-all duration-300">
+                            <div class="text-4xl font-black text-orange-500 mb-2">500+</div>
+                            <div class="text-gray-600 font-semibold">기회 제공</div>
+                        </div>
+                        <div class="stat-card bg-gradient-to-br from-teal-100 to-blue-100 p-6 rounded-2xl text-center transform hover:scale-105 hover:-rotate-1 transition-all duration-300">
+                            <div class="text-4xl font-black text-teal-500 mb-2">200+</div>
+                            <div class="text-gray-600 font-semibold">포트폴리오 완성</div>
+                        </div>
+                        <div class="stat-card bg-gradient-to-br from-yellow-100 to-orange-100 p-6 rounded-2xl text-center transform hover:scale-105 hover:rotate-1 transition-all duration-300">
+                            <div class="text-4xl font-black text-yellow-500 mb-2">50+</div>
+                            <div class="text-gray-600 font-semibold">전시/공연 성사</div>
+                        </div>
+                        <div class="stat-card bg-gradient-to-br from-purple-100 to-pink-100 p-6 rounded-2xl text-center transform hover:scale-105 hover:-rotate-1 transition-all duration-300">
+                            <div class="text-4xl font-black text-purple-500 mb-2">15+</div>
+                            <div class="text-gray-600 font-semibold">업계 멘토</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-orange-200 to-red-200 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                    <div class="absolute inset-0 bg-gradient-to-br from-teal-200 to-blue-200 rounded-3xl transform -rotate-2 group-hover:-rotate-4 transition-transform duration-500"></div>
+                    <img 
+                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" 
+                        alt="TiChi Workshop" 
+                        class="rounded-3xl shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+            </div>
+
+            <!-- 성공 스토리 -->
+            <div class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl p-12">
+                <h3 class="text-4xl font-black text-center mb-12 text-gray-800">
+                    🎯 <span class="text-orange-500">성공 스토리</span>
+                </h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="success-story bg-white p-6 rounded-2xl transform hover:scale-105 transition-all duration-300 border-l-4 border-orange-400">
+                        <div class="text-lg font-bold text-gray-800 mb-2">김OO 작가</div>
+                        <div class="text-sm text-gray-600 mb-3">TiChi 6개월 과정 수료</div>
+                        <div class="text-orange-600 font-semibold">→ 홍대 갤러리 개인전 개최 성공!</div>
+                    </div>
+                    <div class="success-story bg-white p-6 rounded-2xl transform hover:scale-105 transition-all duration-300 border-l-4 border-teal-400">
+                        <div class="text-lg font-bold text-gray-800 mb-2">박OO 뮤지션</div>
+                        <div class="text-sm text-gray-600 mb-3">TiChi 음악 프로그램 참여</div>
+                        <div class="text-teal-600 font-semibold">→ 인디 레이블 계약 체결!</div>
+                    </div>
+                    <div class="success-story bg-white p-6 rounded-2xl transform hover:scale-105 transition-all duration-300 border-l-4 border-yellow-400">
+                        <div class="text-lg font-bold text-gray-800 mb-2">이OO 댄서</div>
+                        <div class="text-sm text-gray-600 mb-3">TiChi 퍼포먼스 워크숍</div>
+                        <div class="text-yellow-600 font-semibold">→ 국제 페스티벌 초청 공연!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 팀 소개 페이지로 이동 버튼 -->
+            <div class="text-center mt-16">
+                <a href="team.html" class="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-12 py-4 rounded-full text-xl font-bold hover:scale-110 transition-all duration-300 shadow-2xl">
+                    씬 너머의 이야기🎬
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="포트폴리오" class="py-32 px-16 bg-gray-50 scroll-animate">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-6xl md:text-7xl font-black mb-8">
+              <span class="text-orange-500">실제</span>
+              <span class="text-gray-800"> 성과들</span>
+            </h2>
+            <p class="text-2xl text-gray-600 font-semibold max-w-3xl mx-auto">
+              말만 번지르르한 게 아니에요. <span class="bg-yellow-200 px-2 py-1 rounded">진짜 결과</span>를 보여드릴게요!
+            </p>
+          </div>
+          
+          <div id="portfolio-section-content" class="grid md:grid-cols-3 gap-12">
+            <!-- Portfolio Item 1 -->
+            <a href="programs/digital-art-foundation.html" class="group block relative overflow-hidden rounded-3xl bg-white shadow-xl hover:shadow-2xl transform hover:scale-105 hover:rotate-1 transition-all duration-500">
+              <div class="aspect-video overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Digital Dreams Exhibition" class="w-full h-full object-cover group-hover:scale-125 transition-all duration-700">
+                <div class="absolute top-4 left-4">
+                  <span class="bg-white/90 text-orange-600 font-bold px-3 py-1 rounded-full text-sm">
+                    Exhibition
+                  </span>
+                </div>
+                <div class="absolute top-4 right-4">
+                  <span class="bg-gray-900/80 text-white font-bold px-3 py-1 rounded-full text-sm">
+                    2024
+                  </span>
+                </div>
+              </div>
+              <div class="p-8 space-y-4">
+                <h3 class="text-2xl font-black text-gray-800 group-hover:text-orange-500 transition-colors duration-300">
+                  Digital Dreams Exhibition
+                </h3>
+                <p class="text-gray-600 leading-relaxed">혁신적인 디지털 아트와 AI의 만남</p>
+                <div class="bg-gradient-to-r from-orange-100 to-red-100 p-4 rounded-xl">
+                  <div class="text-sm font-bold text-orange-600 mb-1">💥 임팩트</div>
+                  <div class="text-sm text-gray-700">500+ 방문자, 3개 언론사 보도</div>
+                </div>
+              </div>
+            </a>
+            <!-- Portfolio Item 2 -->
+            <a href="programs/portfolio-workshop.html" class="group block relative overflow-hidden rounded-3xl bg-white shadow-xl hover:shadow-2xl transform hover:scale-105 hover:rotate-1 transition-all duration-500">
+              <div class="aspect-video overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop" alt="Youth Music Festival" class="w-full h-full object-cover group-hover:scale-125 transition-all duration-700">
+                <div class="absolute top-4 left-4">
+                  <span class="bg-white/90 text-orange-600 font-bold px-3 py-1 rounded-full text-sm">
+                    Festival
+                  </span>
+                </div>
+                <div class="absolute top-4 right-4">
+                  <span class="bg-gray-900/80 text-white font-bold px-3 py-1 rounded-full text-sm">
+                    2023
+                  </span>
+                </div>
+              </div>
+              <div class="p-8 space-y-4">
+                <h3 class="text-2xl font-black text-gray-800 group-hover:text-orange-500 transition-colors duration-300">
+                  Youth Music Festival
+                </h3>
+                <p class="text-gray-600 leading-relaxed">젊은 음악가들의 실험적 사운드 여행</p>
+                <div class="bg-gradient-to-r from-orange-100 to-red-100 p-4 rounded-xl">
+                  <div class="text-sm font-bold text-orange-600 mb-1">💥 임팩트</div>
+                  <div class="text-sm text-gray-700">12명 아티스트 데뷔 지원</div>
+                </div>
+              </div>
+            </a>
+            <!-- Portfolio Item 3 -->
+            <a href="programs/digital-art-foundation.html" class="group block relative overflow-hidden rounded-3xl bg-white shadow-xl hover:shadow-2xl transform hover:scale-105 hover:rotate-1 transition-all duration-500">
+              <div class="aspect-video overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=600&h=400&fit=crop" alt="Community Art Workshop" class="w-full h-full object-cover group-hover:scale-125 transition-all duration-700">
+                <div class="absolute top-4 left-4">
+                  <span class="bg-white/90 text-orange-600 font-bold px-3 py-1 rounded-full text-sm">
+                    Workshop
+                  </span>
+                </div>
+                <div class="absolute top-4 right-4">
+                  <span class="bg-gray-900/80 text-white font-bold px-3 py-1 rounded-full text-sm">
+                    2024
+                  </span>
+                </div>
+              </div>
+              <div class="p-8 space-y-4">
+                <h3 class="text-2xl font-black text-gray-800 group-hover:text-orange-500 transition-colors duration-300">
+                  Community Art Workshop
+                </h3>
+                <p class="text-gray-600 leading-relaxed">지역사회와 함께하는 창작 프로그램</p>
+                <div class="bg-gradient-to-r from-orange-100 to-red-100 p-4 rounded-xl">
+                  <div class="text-sm font-bold text-orange-600 mb-1">💥 임팩트</div>
+                  <div class="text-sm text-gray-700">80명 수강생, 15개 작품 완성</div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="text-center mt-16">
+            <button class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-12 py-4 rounded-full text-xl font-bold hover:scale-110 transition-all duration-300 shadow-2xl">
+              더 많은 프로젝트 보기 🚀
+            </button>
+          </div>
+        </div>
+    </section>
+
+    <!-- Mentors Section -->
+    <section id="멘토링" class="py-32 px-16 bg-white scroll-animate">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-6xl md:text-7xl font-black mb-8">
+              <span class="text-teal-500">업계 탑급</span>
+              <span class="text-gray-800"> 멘토들</span>
+            </h2>
+            <p class="text-2xl text-gray-600 font-semibold max-w-4xl mx-auto">
+              그냥 가르치는 게 아니라 <span class="bg-teal-200 px-2 py-1 rounded">진짜 기회</span>를 연결해주는 멘토들이에요!
+            </p>
+          </div>
+          
+          <div id="mentors-section-content" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Mentor 1 -->
+            <a href="mentors/kim-yerin.html" class="group block relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:scale-105 hover:rotate-2 transition-all duration-500 border-4 border-transparent hover:border-orange-200">
+              <div class="absolute inset-0 bg-gradient-to-br from-orange-50 to-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="p-8 relative">
+                <div class="relative mb-6">
+                  <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face" alt="김예린" class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-orange-200 group-hover:border-teal-300 group-hover:scale-110 transition-all duration-500">
+                  <div class="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full px-3 py-1 text-xs font-black text-white transform group-hover:scale-110 transition-transform duration-500">
+                    10+ years
+                  </div>
+                </div>
+                <div class="text-center space-y-3">
+                  <h3 class="text-xl font-black text-gray-800 group-hover:text-orange-500 transition-colors duration-500">
+                    김예린
+                  </h3>
+                  <p class="text-teal-600 font-bold text-sm">시각예술 디렉터</p>
+                  <p class="text-gray-500 text-xs">Contemporary Art, Digital Media</p>
+                  <div class="bg-gradient-to-r from-yellow-100 to-orange-100 p-3 rounded-xl">
+                    <div class="text-xs font-bold text-orange-600 mb-1">🎯 제공 기회</div>
+                    <div class="text-xs text-gray-700">갤러리 전시 기회 제공</div>
+                  </div>
+                  <div class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 rounded-xl font-bold hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 group-hover:from-teal-500 group-hover:to-blue-500">
+                    <span>포트폴리오 보기</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- Mentor 2 -->
+            <a href="mentors/park-junho.html" class="group block relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:scale-105 hover:rotate-2 transition-all duration-500 border-4 border-transparent hover:border-orange-200">
+              <div class="absolute inset-0 bg-gradient-to-br from-orange-50 to-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="p-8 relative">
+                <div class="relative mb-6">
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" alt="박준호" class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-orange-200 group-hover:border-teal-300 group-hover:scale-110 transition-all duration-500">
+                  <div class="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full px-3 py-1 text-xs font-black text-white transform group-hover:scale-110 transition-transform duration-500">
+                    8+ years
+                  </div>
+                </div>
+                <div class="text-center space-y-3">
+                  <h3 class="text-xl font-black text-gray-800 group-hover:text-orange-500 transition-colors duration-500">
+                    박준호
+                  </h3>
+                  <p class="text-teal-600 font-bold text-sm">음악 교육 전문가</p>
+                  <p class="text-gray-500 text-xs">Jazz, Electronic Music Production</p>
+                  <div class="bg-gradient-to-r from-yellow-100 to-orange-100 p-3 rounded-xl">
+                    <div class="text-xs font-bold text-orange-600 mb-1">🎯 제공 기회</div>
+                    <div class="text-xs text-gray-700">레이블 연결 & 공연 기회</div>
+                  </div>
+                  <div class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 rounded-xl font-bold hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 group-hover:from-teal-500 group-hover:to-blue-500">
+                    <span>포트폴리오 보기</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- Mentor 3 -->
+            <a href="mentors/lee-seoyeon.html" class="group block relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:scale-105 hover:rotate-2 transition-all duration-500 border-4 border-transparent hover:border-orange-200">
+              <div class="absolute inset-0 bg-gradient-to-br from-orange-50 to-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="p-8 relative">
+                <div class="relative mb-6">
+                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face" alt="이서연" class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-orange-200 group-hover:border-teal-300 group-hover:scale-110 transition-all duration-500">
+                  <div class="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full px-3 py-1 text-xs font-black text-white transform group-hover:scale-110 transition-transform duration-500">
+                    12+ years
+                  </div>
+                </div>
+                <div class="text-center space-y-3">
+                  <h3 class="text-xl font-black text-gray-800 group-hover:text-orange-500 transition-colors duration-500">
+                    이서연
+                  </h3>
+                  <p class="text-teal-600 font-bold text-sm">퍼포먼스 아트 큐레이터</p>
+                  <p class="text-gray-500 text-xs">Dance, Theater, Movement</p>
+                  <div class="bg-gradient-to-r from-yellow-100 to-orange-100 p-3 rounded-xl">
+                    <div class="text-xs font-bold text-orange-600 mb-1">🎯 제공 기회</div>
+                    <div class="text-xs text-gray-700">페스티벌 참가 기회</div>
+                  </div>
+                  <div class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 rounded-xl font-bold hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 group-hover:from-teal-500 group-hover:to-blue-500">
+                    <span>포트폴리오 보기</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- Mentor 4 -->
+            <a href="mentors/choi-minseok.html" class="group block relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:scale-105 hover:rotate-2 transition-all duration-500 border-4 border-transparent hover:border-orange-200">
+              <div class="absolute inset-0 bg-gradient-to-br from-orange-50 to-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="p-8 relative">
+                <div class="relative mb-6">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="최민석" class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-orange-200 group-hover:border-teal-300 group-hover:scale-110 transition-all duration-500">
+                  <div class="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full px-3 py-1 text-xs font-black text-white transform group-hover:scale-110 transition-transform duration-500">
+                    6+ years
+                  </div>
+                </div>
+                <div class="text-center space-y-3">
+                  <h3 class="text-xl font-black text-gray-800 group-hover:text-orange-500 transition-colors duration-500">
+                    최민석
+                  </h3>
+                  <p class="text-teal-600 font-bold text-sm">디지털 아트 멘토</p>
+                  <p class="text-gray-500 text-xs">VR/AR, Interactive Installation</p>
+                  <div class="bg-gradient-to-r from-yellow-100 to-orange-100 p-3 rounded-xl">
+                    <div class="text-xs font-bold text-orange-600 mb-1">🎯 제공 기회</div>
+                    <div class="text-xs text-gray-700">테크 기업 협업 프로젝트</div>
+                  </div>
+                  <div class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 rounded-xl font-bold hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 group-hover:from-teal-500 group-hover:to-blue-500">
+                    <span>포트폴리오 보기</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="mt-16 bg-gradient-to-r from-orange-100 to-red-100 rounded-3xl p-12 text-center">
+            <h3 class="text-3xl font-black text-gray-800 mb-6">
+              🔥 <span class="text-orange-500">한정 특가!</span> 지금 신청하면
+            </h3>
+            <div class="text-2xl font-bold text-gray-700 mb-8">
+              1:1 멘토링 <span class="bg-white px-4 py-2 rounded-full text-orange-500">50% 할인</span>
+            </div>
+            <button class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-12 py-4 rounded-full text-xl font-bold hover:scale-110 transition-all duration-300 shadow-2xl">
+              지금 바로 신청하기! ⚡
+            </button>
+          </div>
+        </div>
+    </section>
+
+    <!-- 연락하기 섹션 -->
+    <section id="연락하기" class="py-32 px-16 bg-gray-900 text-white relative overflow-hidden snap-start scroll-animate">
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-64 h-64 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl animate-pulse"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <div class="mb-20">
+                <h2 class="text-6xl md:text-7xl font-black mb-8">
+                    <span class="text-orange-400">지금</span>
+                    <span class="text-white"> 연락하세요!</span>
+                </h2>
+                <p class="text-2xl text-gray-300 font-semibold max-w-4xl mx-auto leading-relaxed">
+                    고민하는 시간에 <span class="bg-orange-500 text-white px-2 py-1 rounded">기회는 사라져요</span>!<br />
+                    지금 바로 연락해서 당신의 예술 여정을 시작하세요!
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12 mb-20">
+                <div class="contact-card group text-center hover:scale-110 transition-all duration-500">
+                    <div class="contact-card-icon bg-gradient-to-br from-orange-500 to-orange-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-2xl">
+                        <!-- Icon will be dynamically loaded here by main.js -->
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 group-hover:text-orange-400 transition-colors duration-500">
+                        즉시 상담
+                    </h3>
+                    <p class="text-gray-300 mb-2">oli@tichi.or.kr</p>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-bold">
+                        30분 내 답변!
+                    </div>
+                </div>
+                
+                <div class="contact-card group text-center hover:scale-110 transition-all duration-500">
+                    <div class="contact-card-icon bg-gradient-to-br from-teal-500 to-teal-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-2xl">
+                        <!-- Icon will be dynamically loaded here by main.js -->
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 group-hover:text-teal-400 transition-colors duration-500">
+                        프로그램 문의
+                    </h3>
+                    <p class="text-gray-300 mb-2">programs@tichi.org</p>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-bold">
+                        맞춤형 프로그램 추천
+                    </div>
+                </div>
+                
+                <div class="contact-card group text-center hover:scale-110 transition-all duration-500">
+                    <div class="contact-card-icon bg-gradient-to-br from-red-500 to-red-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-2xl">
+                        <!-- Icon will be dynamically loaded here by main.js -->
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 group-hover:text-red-400 transition-colors duration-500">
+                        긴급 기회
+                    </h3>
+                    <p class="text-gray-300 mb-2">urgent@tichi.org</p>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-bold">
+                        마감 임박 기회 알림
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl p-12 mb-12">
+                <h3 class="text-4xl font-black text-white mb-6">
+                    ⚡ 특급 핫라인 ⚡
+                </h3>
+                <p class="text-2xl text-white mb-8">
+                    급한 기회나 질문이 있으시면?
+                </p>
+                <div class="text-3xl font-black text-white mb-8">
+                    📱 010-TICHI-GO (010-8424-46)
+                </div>
+                <p class="text-lg text-white/90">
+                    평일 오전 9시~밤 10시, 주말 오후 1시~밤 8시
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <button class="final-cta bg-gradient-to-r from-orange-500 to-red-500 px-12 py-6 rounded-full text-2xl font-black hover:scale-110 hover:rotate-2 transition-all duration-300 shadow-2xl">
+                    지금 바로 시작하기! 🚀
+                </button>
+                <button class="final-cta bg-white text-gray-900 px-12 py-6 rounded-full text-2xl font-black hover:scale-110 hover:-rotate-2 transition-all duration-300 shadow-2xl">
+                    무료 상담 받기 💬
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-black text-white py-20 px-16 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-1/4 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl animate-pulse"></div>
+            <div class="absolute bottom-0 right-1/4 w-48 h-48 bg-teal-500/10 rounded-full blur-2xl animate-pulse"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center space-y-8">
+                <div class="flex items-center justify-center space-x-4">
+                    <img src="assets/tichi_logo.svg" alt="TiChi Logo" class="h-10 w-auto">
+                </div>
+                
+                <div class="text-xl text-gray-400 font-medium max-w-2xl mx-auto">
+                    <div class="mb-2">Teaching imagination, Connecting hearts infinitely.</div>
+                    <div class="text-sm">예술교육 | 창작워크숍 | 네이티브작가 | 멘토링 | 진로상담</div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-4xl mx-auto">
+                    <div class="footer-category">
+                        <div class="text-3xl mb-2">🎨</div>
+                        <div class="text-sm text-gray-400">시각예술</div>
+                    </div>
+                    <div class="footer-category">
+                        <div class="text-3xl mb-2">🎵</div>
+                        <div class="text-sm text-gray-400">음악</div>
+                    </div>
+                    <div class="footer-category">
+                        <div class="text-3xl mb-2">💃</div>
+                        <div class="text-sm text-gray-400">퍼포먼스</div>
+                    </div>
+                    <div class="footer-category">
+                        <div class="text-3xl mb-2">💻</div>
+                        <div class="text-sm text-gray-400">디지털아트</div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-800 pt-8">
+                    <div class="text-sm text-gray-500 space-y-2">
+                        <div>© 2024 TiChi (티치). 모든 권리 보유.</div>
+                        <div>비영리 예술 교육 단체 | 사업자등록번호: 123-45-67890</div>
+                        <div>주소: 서울시 마포구 홍대입구역 근처 어딘가 🎭</div>
+                        <div class="mt-4">
+                            <span class="text-orange-400 font-bold">
+                                "당신의 예술이 세상을 바꾸는 그 순간까지"
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-orange-500 to-red-500 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 opacity-0 pointer-events-none z-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- 자바스크립트 -->
+    <script src="js/main.js"></script>
 </body>
+</html>
